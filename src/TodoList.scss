@@ -1,0 +1,37 @@
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Poppins:900');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $backgroundColor;
+  text-align: center;
+}
+
+section {
+  display: inline-block;
+}
+
+h1 {
+  color: $blackColor;
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.background-container {
+  position: absolute;
+  fill: $redColor;
+  width: 50vmax;
+  right: 20rem;
+  z-index: -1;
+}

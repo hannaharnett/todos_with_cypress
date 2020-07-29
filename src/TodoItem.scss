@@ -1,0 +1,17 @@
+@import "variables.scss";
+
+li {
+  display: flex;
+  align-items: center;
+
+  button {
+    display: block;
+    border: 1px solid $blackColor;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    margin: 5px;
+    text-align: center;
+  }
+}
