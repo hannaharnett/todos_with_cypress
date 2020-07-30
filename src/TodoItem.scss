@@ -1,17 +1,14 @@
 @import "variables.scss";
 
 li {
+  width: 100%;
   display: flex;
+  text-align: start;
   align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
 
-  button {
-    display: block;
-    border: 1px solid $blackColor;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    background-color: transparent;
-    margin: 5px;
-    text-align: center;
+  p {
+    width: 95%;
   }
 }

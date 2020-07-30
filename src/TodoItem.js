@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import Button from './Button';
 import './TodoItem.scss';
 
 const TodoItem = (props) => {
@@ -16,13 +17,11 @@ const TodoItem = (props) => {
       >
         {todo.text}
       </p>
-      <button
-        className="todo-item-delete"
-        aria-label="Delete item"
-        onClick={() => deleteTodoItem(todo.id)}
-      >
-        -
-      </button>
+      <Button
+        ariaLabel={`Delete ${todo.text}`}
+        action={() => deleteTodoItem(todo.id)}
+        icon="fas fa-trash"
+      />
     </li>
   )
 }

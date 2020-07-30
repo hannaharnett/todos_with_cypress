@@ -9,19 +9,25 @@
 
 body {
   background-color: $backgroundColor;
+  font-family: $fontFamily;
+  font-size: 2.5em;
+  color: $blackColor;
+}
+
+main {
   text-align: center;
 }
 
 section {
+  min-width: 60vw;
+  max-width: 80vw;
   display: inline-block;
 }
 
 h1 {
-  color: $blackColor;
   font-size: 6rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -29,9 +35,56 @@ ul {
 }
 
 .background-container {
-  position: absolute;
+  position: fixed;
   fill: $redColor;
-  width: 50vmax;
-  right: 20rem;
+  min-width: 100%;
   z-index: -1;
 }
+
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid $blackColor;
+
+  &:focus-within {
+    background-color: $redTransparentColor;
+  }
+
+  input {
+    width: 80%;
+    flex-grow: 2;
+    height: 3.3rem;
+    background-color: transparent;
+    border: none;
+    color: $blackColor;
+    font-size: inherit;
+    font-family: $fontFamily;
+    caret-color: $blackColor;
+
+    &::placeholder {
+      color: $blackColor;
+      font-family: $fontFamily;
+    }
+
+    &:focus {
+      outline: none;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
