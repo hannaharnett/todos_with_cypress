@@ -45,7 +45,9 @@ const TodoList = () => {
   }
 
   const handleInput = (e) => {
-    setTodo(e.target.value);
+    const todo = e.target.value;
+    if (todo.trim().length === 0) return;
+    setTodo(todo);
   };
 
   const deleteTodoItem = (id) => {

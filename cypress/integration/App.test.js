@@ -29,8 +29,15 @@ describe('<App />', () => {
     it('If the Add button is pressed, but the input field is empty, prevent a new TodoItem from being added', () => {
       cy.get('[data-cy=addTodo]').click();
     });
+    it('If the Add button is pressed, but the input field only has whitespace, prevent a new TodoItem from being added', () => {
+      cy.get('[data-cy=new-todo-input]')
+        .type('   ');
+      cy.get('[data-cy=addTodo]').click();
+      cy.get('li').should('have.length', 2);
+    })
     it('If the Add button is pressed and the input field has content, add a new TodoItem', () => {
       cy.get('[data-cy=new-todo-input]')
+        .clear()
         .type('Walk dog')
         .should('have.value', "Walk dog");
       cy.get('[data-cy=addTodo]').click();
