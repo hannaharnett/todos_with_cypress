@@ -75,6 +75,7 @@ const TodoList = () => {
         </div>
         <div className="todo-input">
           <input
+            data-cy="new-todo-input"
             type="text"
             value={todo}
             aria-label="Please enter todo item"
@@ -84,6 +85,7 @@ const TodoList = () => {
             ref={inputRef}
           />
           <Button
+            dataCy="addTodo"
             ariaLabel="Add item"
             action={createTodoItem}
             icon="fas fa-plus"

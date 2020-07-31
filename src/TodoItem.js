@@ -18,6 +18,7 @@ const TodoItem = (props) => {
         {todo.text}
       </p>
       <Button
+        dataCy="deleteTodo"
         ariaLabel={`Delete ${todo.text}`}
         action={() => deleteTodoItem(todo.id)}
         icon="fas fa-trash"
