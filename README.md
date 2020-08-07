@@ -1,6 +1,26 @@
-## Todos
+# Todos
+![Alt Text](http://g.recordit.co/RFOqWuUjBz.gif)
+Todos is a simple, colorful and accessible todo app!
 
-### Credit
+## Installation
+
+### Clone
+Clone this repo to your local machine using [https://github.com/hannaharnett/todos_with_cypress](https://github.com/hannaharnett/todos_with_cypress)
+
+### Setup
+In the root folder run 
+```
+$ npm install
+$ npm start
+```
+Go to localhost:3000 to view project
+
+## Contributing
+Pull requests are welcome. Thanks for contributing!
+
+Please make sure to update tests as appropriate.
+
+## Credit
 
 SVG from [Monica Dinculescu's codepen](https://codepen.io/notwaldorf/pen/omXwzw)
 
