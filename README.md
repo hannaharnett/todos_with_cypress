@@ -15,6 +15,13 @@ $ npm start
 ```
 Go to localhost:3000 to view project
 
+### Tests
+
+To run tests in the command line
+```
+$ npm run cy:run
+```
+
 ## Contributing
 Pull requests are welcome. Thanks for contributing!
 
