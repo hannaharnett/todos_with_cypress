@@ -8,7 +8,7 @@ const TodoList = () => {
     { id: 1, text: "Make bread" },
     { id: 2, text: "Buy flowers" }
   ]);
-  const [todo, setTodo] = useState(null);
+  const [todo, setTodo] = useState("");
   const [showError, setShowError] = useState(false);
   const [message, setMessage] = useState(null);
   const inputRef = useRef();
@@ -25,7 +25,7 @@ const TodoList = () => {
     setShowError(true);
     const timer = setTimeout(() => setShowError(false), 3000);
     return () => clearTimeout(timer);
-  }
+  };
 
   const createTodoItem = () => {
     if (!todo) {
@@ -42,11 +42,13 @@ const TodoList = () => {
     if (e.key === "Enter") {
       createTodoItem();
     }
-  }
+  };
 
   const handleInput = (e) => {
-    const todo = e.target.value;
-    if (todo.trim().length === 0) return;
+    let todo = e.target.value;
+    if (todo.trim().length === 0) {
+      todo = "";
+    }
     setTodo(todo);
   };
 
